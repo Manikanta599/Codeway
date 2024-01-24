@@ -1,0 +1,12 @@
+package NumberGame;
+
+public class Game {
+	public static void main(String[] args) {
+		RandomNum rnum=new RandomNum();
+		int num=rnum.generateRandon();
+		UserGuess u=new UserGuess();
+		u.userGuessNum(num);
+		u.score();
+	}
+
+}

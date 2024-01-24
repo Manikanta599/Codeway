@@ -1,0 +1,64 @@
+package NumberGame;
+
+import java.util.Scanner;
+
+public class UserGuess {
+	public int count=5;
+	private int scr;
+	
+	public void userGuessNum(int randNum)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("you have only 5 attempts to Guess the number");
+		boolean b=true;
+		while(b&&count<=1)
+		{
+			
+			System.out.println("Guess a number");
+			int num=s.nextInt();
+			if(num>randNum)
+			{
+				System.out.println("Guessed number is too high");
+				System.out.println();
+				System.out.println("you have left only "+--count+"attempts");
+			}
+			else if(num<randNum)
+			{
+				System.out.println("Guessed number is too low");
+				System.out.println();
+				System.out.println("you have left only "+--count+"attempts");
+			}
+			else
+			{
+				System.out.println("wow! you guessed correctly");
+				count--;
+				b=false;
+				break;
+			}
+			scr=count;
+			count=0;
+			System.out.println(num);
+		}
+		
+		
+	}
+	
+	public void score()
+	{
+		if(scr==4)
+		{
+			System.out.println("your score is 5/5");
+		}
+		else if(scr>2&&scr<=3)
+		{
+			System.out.println("your score is 4/5");
+		}
+		else
+		{
+			System.out.println("your score is 3/5");
+		}
+		
+		
+	}
+
+}

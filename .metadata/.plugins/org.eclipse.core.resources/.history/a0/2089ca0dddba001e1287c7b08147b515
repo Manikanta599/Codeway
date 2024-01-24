@@ -1,0 +1,22 @@
+package src.NumberGameGame;
+
+import java.util.Scanner;
+
+public class Game {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String res="yes";
+		while(res.equalsIgnoreCase("yes"))
+		{
+			RandomNum rnum=new RandomNum();
+			int num=rnum.generateRandon();
+			UserGuess u=new UserGuess();
+			u.userGuessNum(num);
+			u.score();
+			System.out.println("if you want to play again please Type 'YES' else 'NO'");
+			res=sc.next();
+		}
+		System.out.println("well played");
+		System.out.println("******** $$$ THANK YOU $$$ '''**********");
+			}
+}

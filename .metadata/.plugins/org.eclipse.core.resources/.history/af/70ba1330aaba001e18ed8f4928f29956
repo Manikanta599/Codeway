@@ -1,0 +1,14 @@
+package NumberGame;
+import java.util.Random;
+public class RandomNum {
+	
+	public int generateRandon()
+	{
+		int min=1;
+		int max=101;
+		Random random=new Random();
+		int randomNum=random.nextInt(min,max);
+		int n=78;
+		return n;
+	}
+}
